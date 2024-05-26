@@ -30,6 +30,7 @@ const obj3 = {5: "a", 6: "b"}
 // console.log(obj4)
 // console.log(Object.keys(tinderUser))
 // console.log(Object.values(tinderUser))
+// console.log(tinderUser.hasOwnProperty('id')) // this applay on key object
 
 const users = [
     {
@@ -46,4 +47,12 @@ const users = [
     }
 ]
 // console.log(users[0].email)
+// Destructer operation 
+const course = {
+    coursename: "js in hindi",
+    price: "free",
+    courseInstructor: "chhotu"
+}
 
+const {courseInstructor: instructor} = course
+console.log(instructor)
