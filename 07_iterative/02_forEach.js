@@ -35,3 +35,6 @@ const myCoding = [
 myCoding.forEach((items)=>{
     console.log(items.languageName)
 })
+
+// Importented 
+// if we aplay some operation or return type then can't do on foreach loop 
