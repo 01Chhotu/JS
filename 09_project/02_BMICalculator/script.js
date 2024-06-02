@@ -19,12 +19,20 @@ form.addEventListener('submit', function(e){
         results.innerHTML = `<span>your BMI Index is ${BMI}</span>`;
         if(BMI<=18.6){
             guide.children[1].style.color = "red"
+            guide.children[2].style.color = "black"
+            guide.children[3].style.color = "black"
         }
         else if(BMI>24.9){
             guide.children[3].style.color = "red"
+            guide.children[1].style.color = "black"
+            guide.children[2].style.color = "black"
+
         }
         else{
             guide.children[2].style.color = "green"
+            guide.children[3].style.color = "black"
+            guide.children[1].style.color = "black"
+
         }
 
     }
