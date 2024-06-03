@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai or code</h1>
+    <button id="stop">stop</button>
+    <button id="start">start</button>
+</body>
+<script>
+    // function changeText(){
+    //     const h = document.querySelector('h1');
+    //     h.innerHTML="chhotu or code"
+    // }
+    // setTimeout(function(){
+    //     console.log("chhotu")
+    // }, 2000)
+    // const notChange = setTimeout(changeText, 2000)
+    // document.querySelector('#stop').addEventListener('click', function(e){
+    //     // console.log("not change")
+    //     // clearTimeout(notChange)
+    // })
+    let cnt=0;
+    // setInterval(function(){
+    //     console.log(`chhout ${cnt++}`)
+    // }, 2000)
+    document.querySelector('#start').addEventListener('click', function(){
+        const setIn = setInterval(function(){
+            console.log(`chhotu ${cnt++}`);
+        }, 1000)
+        document.querySelector('#stop').addEventListener('click', function(){
+            clearInterval(setIn)
+        })
+    })
+
+</script>
+</html>
