@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexicalScope and closure</title>
+</head>
+<body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+    // LexicalScop
+    // function Outer(){
+    //     let username = "chhotu"
+    //     function inner(){
+    //         console.log(`inner: ${username}`)
+    //     }
+    //     function innerTwo(){
+    //         console.log(`innerTwo: ${username}`)
+    //     }
+    //     inner()
+    //     innerTwo()
+    // }
+    // Outer()
+</script>
+<script>
+    // document.querySelector('#orange').onclick = function(){
+    //     document.body.style.backgroundColor = `orange`
+    // }
+    // document.querySelector('#green').onclick = function(){
+    //     document.body.style.backgroundColor = `green`
+    // }
+    function clickhandler(color){
+        return function bg(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    document.querySelector("#orange").onclick = clickhandler("orange")
+    document.querySelector("#green").onclick = clickhandler("green")
+</script>
+</html>
